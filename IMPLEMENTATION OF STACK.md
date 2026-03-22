@@ -3,12 +3,12 @@
 
 ---
 
-### AIM  
+### AIM:  
 To write a Python program to implement a stack using a list and its built-in methods (`append()`, `pop()`).
 
 ---
 
-### ALGORITHM
+### ALGORITHM:
 
 1. **Start the program.**
 2. **Define a class `st`** with the following methods:
@@ -24,8 +24,23 @@ To write a Python program to implement a stack using a list and its built-in met
 
 ---
 
-### PROGRAM
-
+### PROGRAM:
 ```
-
+stack = []
+stack.append(input())
+stack.append(input())
+stack.append(input())
+print("Stack before elements are popped")
+print(stack)
+stack.pop()
+stack.pop()
+stack.pop()
+print("\nStack after elements are popped:")
+print(stack)
 ```
+### OUTPUT:
+<img width="1075" height="343" alt="image" src="https://github.com/user-attachments/assets/dee6889b-f0d6-46d8-be0e-d4136951b192" />
+
+### RESULT:
+Successfully implemented a stack using Python list. Items were added using append() and removed using pop(), demonstrating LIFO (Last In First Out) behavior of stack.
+
