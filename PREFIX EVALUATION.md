@@ -3,12 +3,12 @@
 
 ---
 
-### AIM  
+### AIM:  
 To write a Python program to evaluate a user-given Prefix expression using a stack. The expression must contain operators such as Multiplication, Addition, and Subtraction.
 
 ---
 
-### ALGORITHM
+### ALGORITHM:
 
 1. **Start the program.**
 2. Define a set of valid operators: `*, -, +, %, /, **`.
@@ -25,16 +25,32 @@ To write a Python program to evaluate a user-given Prefix expression using a sta
 
 ---
 
-### PROGRAM
-
+### PROGRAM:
 ```
-
-
+OPERATORS=set(['*','-','+','%','/','**']) 
+def evaluate(expression):
+	stack = []
+	for c in expression[::-1]:
+		if c not in OPERATORS:
+			stack.append(int(c))
+		else:
+			o1 = stack.pop()
+			o2 = stack.pop()
+			if c == '+':
+				stack.append(o1 + o2)
+			elif c == '-':
+				stack.append(o1 - o2)
+			elif c == '*':
+				stack.append(o1 * o2)
+			elif c == '/':
+				stack.append(o1 / o2)
+	return stack.pop()
+test_expression = input()
+print("Prefix Expression :",test_expression)
+print("Evaluation result :",evaluate(test_expression))
 ```
+### OUTPUT:
+<img width="1062" height="255" alt="image" src="https://github.com/user-attachments/assets/eac1d629-284e-4957-aa17-3331d082182d" />
 
-
-### OUTPUT
-
-
-
-### RESULT
+### RESULT:
+The program evaluates the given prefix expression using stack operations and displays the final result.
